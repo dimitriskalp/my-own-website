@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: var(--layoutcolor);
+  font-family: "Poppins", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  -webkit-box-shadow: -2px 11px 16px -4px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: -2px 11px 16px -4px rgba(0, 0, 0, 0.62);
+  box-shadow: -2px 11px 16px -4px rgba(0, 0, 0, 0.62);
+  transition: top 0.3s;
+}
+.logo1 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 20%;
+}
+.nav-links li {
+  list-style: none;
+}
+.nav-links a {
+  color: var(--wordscolor);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  margin-right: 5px;
+}
+.burger {
+  display: none;
+  cursor: pointer;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--wordscolor);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+  nav {
+    height: 6vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .logo1 {
+    margin-left: -4rem;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: var(--layoutcolor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    -webkit-box-shadow: -25px 15px 41px -8px rgba(0, 0, 0, 0.56);
+    -moz-box-shadow: -25px 15px 41px -8px rgba(0, 0, 0, 0.56);
+    box-shadow: -25px 15px 41px -8px rgba(0, 0, 0, 0.56);
+  }
+  .nav-links li {
+    opacity: 1;
+  }
+  .burger {
+    display: block;
+    margin-right: -4rem;
+  }
+  nav {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 415px) and (max-width: 768px) {
+  nav {
+    width: 100%;
+  }
+  .nav-links {
+    width: 30%;
+  }
+  .logo1 {
+    margin-left: -12rem;
+  }
+  .burger {
+    display: block;
+    margin-right: -12rem;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 2400px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .one {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .two {
+  opacity: 0;
+}
+.toggle .three {
+  transform: rotate(45deg) translate(-5px, -6px);
+}

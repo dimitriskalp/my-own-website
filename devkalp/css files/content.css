@@ -1,0 +1,265 @@
+:root {
+  --backcolor: #f7c279;
+  --layoutcolor: #105a6b;
+  --wordscolor: #5fbcd8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--backcolor);
+  font-family: "Poppins", sans-serif;
+  color: var(--wordscolor);
+  max-width: 1400px;
+  margin: 0 auto !important;
+  float: none !important;
+}
+/* sto navbar exw valei minheight 8vh */
+.content {
+  margin-top: 8vh;
+}
+.intro {
+  background-color: var(--layoutcolor);
+  width: 80%;
+  height: 700px;
+  padding-left: 2rem;
+  font-size: 30px;
+  position: relative;
+  -webkit-box-shadow: 13px 14px 32px -8px rgba(0, 0, 0, 0.61);
+  -moz-box-shadow: 13px 14px 32px -8px rgba(0, 0, 0, 0.61);
+  box-shadow: 13px 14px 32px -8px rgba(0, 0, 0, 0.61);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.p-intro1 {
+  padding-top: 2rem;
+  width: 20%;
+}
+.logo2 {
+  padding-top: 2rem;
+  position: absolute;
+  font-size: 50px;
+}
+.p-intro2 {
+  padding-top: 8rem;
+  width: 43%;
+}
+.foto-intro {
+  height: 700px;
+  max-width: 600px;
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.foto-intro img {
+  max-width: 100%;
+  height: 100%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin: 0 auto;
+}
+.social-links {
+  text-align: left;
+  width: 40%;
+  margin-top: 6rem;
+}
+.icons {
+  padding: 0;
+  list-style: none;
+  margin: 1em;
+}
+.icons li {
+  display: inline-block;
+  position: relative;
+  font-size: 32px;
+  margin: 18px;
+}
+.icons i {
+  color: #264b56;
+  position: absolute;
+  top: 21px;
+  left: 21px;
+  transition: all 265ms ease-out;
+}
+.icons a {
+  display: inline-block;
+}
+.icons a::before {
+  transform: scale(1);
+  content: "";
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  display: block;
+  background: linear-gradient(45deg, #94103a, #d64747);
+  transition: all 265ms ease-out;
+}
+.icons a:hover::before {
+  transform: scale(0);
+  transition: transform 265ms ease-in;
+}
+.icons a:hover i {
+  transform: scale(1.8);
+  background: linear-gradient(45deg, #94103a, #d64747);
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 265ms ease-in;
+}
+.portfolio {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio button {
+  position: absolute;
+  background-color: var(--backcolor);
+  color: var(--wordscolor);
+  font-size: 70px;
+  border: 3px solid;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 20%;
+  outline: none;
+}
+.portfolio a {
+  font-size: 25px;
+  text-decoration: none;
+  position: relative;
+  bottom: 16px;
+  color: var(--wordscolor);
+}
+.portfolio button:hover {
+  background-color: rgba(255, 255, 216, 0.3);
+}
+@media screen and (max-width: 414px) {
+  .intro {
+    width: 100%;
+    margin-right: 0;
+  }
+  .p-intro1 {
+    font-size: 20px;
+    width: 100%;
+  }
+  .logo2 {
+    font-size: 35px;
+  }
+  .p-intro2 {
+    width: 90%;
+    font-size: 20px;
+    line-height: 3rem;
+  }
+  .foto-intro {
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.6);
+    top: 6rem;
+    right: 2rem;
+    max-width: 6rem;
+    border: 5px solid var(--wordscolor);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 1000;
+    height: 15%;
+    animation: float 6s ease-in-out infinite;
+  }
+  .foto-intro img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+    border-radius: 50%;
+    width: 86px;
+  }
+  .social-links {
+    width: 100%;
+    margin: 3rem -6rem 2rem -2rem;
+  }
+  .social-links ul {
+    display: flex;
+    width: 100%;
+  }
+  .portfolio button {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .intro {
+    width: 100%;
+  }
+  .social-links {
+    width: 100%;
+    margin: 2rem 4rem 3rem 0;
+  }
+  .social-links ul {
+    display: flex;
+    width: 100%;
+    margin-left: -2rem;
+  }
+}
+@media screen and (min-width: 415px) and (max-width: 768px) {
+  .intro {
+    width: 100%;
+    position: relative;
+  }
+  .foto-intro img {
+    display: none;
+  }
+  .foto-intro {
+    background: url("../css-images/valencia2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 26%;
+    position: absolute;
+    right: 0;
+  }
+  .p-intro2 {
+    width: 70%;
+    margin-top: 2.5em;
+  }
+  .p-intro1 {
+    width: 30%;
+  }
+  .logo2 {
+    font-size: 60px;
+    margin-top: 2rem;
+  }
+  .social-links {
+    margin-top: 1em;
+    margin-left: 2em;
+  }
+  .social-links ul {
+    display: flex;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .intro {
+    font-size: 25px;
+  }
+
+  .foto-intro {
+    width: 50%;
+  }
+  .social-links ul {
+    display: flex;
+  }
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.6);
+    transform: translatey(0);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0 rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.6);
+    transform: translatey(0);
+  }
+}

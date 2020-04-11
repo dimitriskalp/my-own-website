@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.tech-stack {
+  color: var(--wordscolor);
+  text-align: center;
+  font-size: 30px;
+  position: relative;
+  margin: 6rem 4rem 6rem 4rem;
+}
+.tech-p {
+  font-size: 25px;
+  margin-top: 2rem;
+}
+.tech-p::after {
+  content: "\f135";
+  font-family: fontawesome !important;
+  font-size: 40px;
+}
+.techstack-lists {
+  padding: 0;
+  margin: 2em;
+}
+.techstack-lists li {
+  display: inline-block;
+  position: relative;
+  font-size: 30px;
+  margin: 18px;
+  margin-left: 4em;
+  line-height: 2rem;
+}
+.python::before {
+  background-image: url(../css-images/python.png);
+  background-size: 60px 60px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  content: "";
+  vertical-align: middle;
+  margin-right: 1em;
+}
+.html::before {
+  background-image: url(../css-images/html-css.png);
+  background-size: 60px 50px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  content: "";
+  vertical-align: middle;
+  margin-right: 1em;
+}
+.java::before {
+  background-image: url(../css-images/java.png);
+  background-size: 60px 60px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  content: "";
+  vertical-align: middle;
+  margin-right: 1em;
+}
+.c::before {
+  background-image: url(../css-images/c.png);
+  background-size: 60px 60px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  content: "";
+  vertical-align: middle;
+  margin-right: 1em;
+}
+
+@media screen and (max-width: 414px) {
+  .tech-stack {
+    width: 85%;
+    font-size: 20px;
+    margin-left: 0.8em;
+  }
+  .tech-stack p {
+    width: 100%;
+    font-size: 15px;
+    margin-top: 2rem;
+  }
+  .techstack-lists {
+    display: flex;
+    font-size: 20px;
+  }
+  .techstack-lists ul li {
+    font-size: 15px;
+  }
+  .java::before {
+    margin-left: -8rem;
+    background-size: 40px 40px;
+    margin-right: -1em;
+  }
+  .python::before {
+    margin-left: -6rem;
+    background-size: 40px 40px;
+    margin-right: -1em;
+  }
+  .html::before {
+    margin-left: -4rem;
+    background-size: 40px 40px;
+    margin-right: -1em;
+  }
+  .c::before {
+    margin-left: -4rem;
+    background-size: 40px 40px;
+    margin-right: -1em;
+  }
+}
+@media screen and (min-width: 415px) and (max-width: 768px) {
+  .tech-stack {
+    width: 80%;
+    font-size: 25px;
+  }
+  .tech-stack p {
+    width: 100%;
+    padding-top: 0;
+    font-size: 20px;
+  }
+  .techstack-lists {
+    display: flex;
+    margin: 2em;
+  }
+  .techstack-lists ul li {
+    font-size: 25px;
+    margin-top: 1em;
+  }
+  .java::before {
+    margin-left: -8em;
+    background-size: 60px 60px;
+  }
+  .python::before {
+    margin-left: -11rem;
+    background-size: 60px 60px;
+  }
+  .html::before {
+    margin-left: -6rem;
+    background-size: 60px 60px;
+  }
+  .c::before {
+    margin-left: -7rem;
+    background-size: 60px 60px;
+  }
+  .techstack-lists ul {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .first-list {
+    margin-left: -2em;
+  }
+}

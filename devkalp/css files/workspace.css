@@ -1,0 +1,134 @@
+:root {
+  --backcolor: #f7c279;
+  --layoutcolor: #105a6b;
+  --wordscolor: #5fbcd8;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--backcolor);
+  width: 100%;
+  height: auto;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  color: var(--wordscolor);
+}
+.Workspace-hd {
+  font-size: 50px;
+  text-align: center;
+  padding-top: 5rem;
+}
+.work-img {
+  margin-top: 3rem;
+  height: 700px;
+}
+.work-img img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  height: 100%;
+  width: 80%;
+  -webkit-box-shadow: 6px 13px 56px -5px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: 6px 13px 56px -5px rgba(0, 0, 0, 0.48);
+  box-shadow: 6px 13px 56px -5px rgba(0, 0, 0, 0.48);
+  border-radius: 10px;
+}
+.parts-pc h1 {
+  font-size: 40px;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  text-align: center;
+  text-decoration: underline;
+}
+.parts-pc {
+  font-size: 20px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 2rem;
+  background: var(--layoutcolor);
+  border-radius: 5px;
+}
+.parts-pc ul {
+  padding-right: 5rem;
+  padding-left: 5rem;
+  padding-bottom: 2rem;
+}
+.parts-pc .sec-ul li {
+  list-style: none;
+  font-size: 15px;
+}
+.parts-pc a {
+  text-decoration: none;
+}
+.workspace-footer {
+  text-align: center;
+}
+.wordkspace-footer .fa {
+  font-size: 15px;
+}
+.parts-pc a:visited {
+  color: var(--wordscolor);
+}
+.parts-pc a:active {
+  color: white;
+}
+.parts-pc a:hover {
+  /* color: var(--wordscolor); */
+  background: linear-gradient(
+    180deg,
+    rgba(232, 232, 240, 0) 68%,
+    rgba(252, 252, 255, 0) 68%,
+    rgba(109, 218, 240, 0.9220063025210083) 100%
+  );
+}
+
+@media screen and (max-width: 415px) {
+  .work-img {
+    height: 80%;
+  }
+  .parts-pc {
+    width: 80%;
+  }
+  .parts-pc h1 {
+    font-size: 30px;
+  }
+  .first-ul {
+    width: 120%;
+    margin-left: -3em;
+    font-size: 18px;
+    list-style: none;
+  }
+  .sec-ul li {
+    width: 220px;
+    margin-left: -4em;
+  }
+}
+@media screen and (min-width: 416px) and (max-width: 1024px) {
+  .parts-pc {
+    width: 90%;
+  }
+  .work-img {
+    height: 90%;
+  }
+  .Workspace-hd {
+    padding-top: 2em;
+  }
+  .first-ul {
+    list-style: none;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .work-img {
+    height: 70%;
+  }
+  .first-ul {
+    margin-left: 4em;
+  }
+  .Workspace-hd {
+    padding-top: 3em;
+  }
+}
